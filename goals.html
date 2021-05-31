@@ -1,0 +1,84 @@
+<html>
+   <head>
+    <title>
+        Assignment 2
+    </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js"></script>
+    <link rel="stylesheet" href="./styles1.css">
+</head>
+<body>
+  
+<div class="navbar">
+  <a href="./Home.html">Home</a>
+  <a href="./teams.html">Teams</a>
+
+  <a href="./awards.html">Awards</a>
+  <div class="dropdown">
+    <button class="dropbtn">Statistics 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="./goals.html">Goals</a>
+      <a href="./topplayer.html">Top Player</a>
+      <a href="./cleansheets.html">Clean Sheets</a>
+    </div>
+  </div> 
+</div>
+  <div style="padding-top: 100px;">
+  <h1 style="margin-top: 1px;color: green">Top Goal Scorer</h1>
+   <div class="split left">
+  <div class="centered">
+   <svg style="width:1000px;height:500px; margin-left: 300px; margin-top: 300px;"></svg>
+    <ul style="text-align: left;list-style-type: square;color: ">
+        <li style="color:  black;green;background-color: white">8 Goals</li>
+        <li style="color:  green;green;background-color: white">6 Goals Without Penalties</li>
+        <li style="color:  deepskyblue;background-color: white">2 Goals From Penalties</li>
+    </ul>
+     <div style="margin-top: 50px">
+  <ul style="list-style-type: none;">
+      <li class=""><a href="goals.html">Lionel Messi</a></li>
+      <li class=""><a href="james.html">James Rodriguez</a></li>
+      <li class=""><a href="ronaldo.html">Christiano Ronaldo</a></li>
+      </ul>
+      </div>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="images/mess1.jpg" style="margin-right: 300px; width: 470px;height: 500px;" alt="Avatar man">
+    <h2>Lionel Messi</h2>
+  </div>
+</div>
+</div>
+
+    <script>
+        d3.csv("data/browserstats.csv", pieChart);
+        function pieChart(data) {
+            
+            var pieChart = d3.pie();
+            var newArc = d3.arc();
+            
+            newArc.innerRadius(80)
+                .outerRadius(100);
+            
+            pieChart.value(d => d.Stats);
+            
+            var myPie = pieChart(data);
+            
+            var colorScale = d3.scaleOrdinal()
+                    .range(["green", "skyblue", "black", "yellow", "#a05d56", "blue"]);
+            
+            d3.select("svg")
+                .append("g")
+                .attr("transform", "translate(250,250)")
+                .selectAll("path")
+                .data(myPie)
+                .enter()
+                .append('path')
+                .attr("d", newArc)
+                .style("fill",(d,i)=>colorScale(i));
+        }
+    </script>
+</body>
+</html>

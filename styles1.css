@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #6699ff;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #4CAF50;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+    
+    .banner{
+        width: 90%;
+        height: 75%;
+        position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+        
+    }  
+    
+    .column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.row{
+      padding-top: 50%;   
+    }
+.row:after {
+   
+  content: "";
+  display: table;
+  clear: both;
+    
+}
+    
+.div1 {
+  top: 50%;
+  left: 50%;
+  text-align: center;
+    color: #353c4a;
+}
+    .div2 {
+        position: relative;
+  
+  left: 33%;
+  text-align: center;
+    color: aliceblue;
+}
+    
+    .rounded{
+          width: 150px;
+  border-radius: 50%;
+    }
+    
+  .split {
+  height: 100px;
+  width: 50%;
+  position: absolute;
+ 
+  top: 50%;
+
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: white;
+}
+
+.right {
+  right: 0;
+  background-color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.centered1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.centered1 img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.li1{
+    margin-left: 370px;
+    margin-right: 370px;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    margin-bottom: 10px;
+}
+
+li{
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: skyblue;
+}
